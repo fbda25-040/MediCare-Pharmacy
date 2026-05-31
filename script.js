@@ -133,3 +133,20 @@ if(prescriptionForm){
     });
 
 }
+];
+
+const tipBtn = document.getElementById("tipBtn");
+
+if(tipBtn){
+
+    tipBtn.addEventListener("click", function(){
+
+        let random =
+        Math.floor(Math.random() * tips.length);
+
+        document.getElementById("tipText").textContent =
+        tips[random];
+
+    });
+
+}
