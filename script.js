@@ -96,3 +96,40 @@ document
 tips[random];
 
 });
+const searchInput =
+document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup",()=>{
+
+const filter =
+searchInput.value.toLowerCase();
+
+document
+.querySelectorAll(".product-card")
+.forEach(card=>{
+
+card.style.display =
+card.textContent.toLowerCase()
+.includes(filter)
+? "block"
+: "none";
+
+});
+
+});
+const prescriptionForm =
+document.querySelector(".prescription-form");
+
+if(prescriptionForm){
+
+    prescriptionForm.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        alert("Prescription uploaded successfully. Our pharmacist will review it shortly.");
+
+        prescriptionForm.reset();
+
+    });
+
+}
